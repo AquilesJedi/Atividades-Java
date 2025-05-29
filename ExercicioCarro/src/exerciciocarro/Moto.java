@@ -8,11 +8,14 @@ public class Moto {
     int vel;
     
     void acelerar(int aceleracao){
-        vel+=aceleracao;
+        this.vel+=20;
     }
     
     void freiar(int reduzir){
-        vel-=reduzir;
+        this.vel+=10;
+        if (this.vel < 0) {
+            this.vel = 0;
+        }
     }
     
     void buzinar(){
